@@ -79,7 +79,6 @@ appAngular.controller('WeatherCtrl', function($scope, $http) {
 
     $scope.geolocate = function() {
         navigator.geolocation.getCurrentPosition(function(position) {
-            console.log(position);
             var url = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&appid=8864493f6cc5082458c8624919207fcd';
             
             $scope.loader = true;

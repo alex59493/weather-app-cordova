@@ -1,0 +1,38 @@
+<section ng-controller="WeatherCtrl">
+
+    <div class="loader" ng-show="loader">
+        <!-- Gif loader -->
+    </div>
+
+    <section class="panel panel-padding" ng-class="{'center': panel == 0, 'left': panel > 0}">
+        <p>
+            Bienvenue sur la page d'accueil de l'application meteo géniale
+        </p>
+        <form ng-submit="search()">
+            <p>
+                <input type="text" placeholder="Rechercher une ville" ng-model="city">
+            </p>
+            <p>
+                <a ng-click="geolocate()">Géolocalisation</a>
+            </p>
+            <p>
+                <input type="submit" value="Rechercher">
+            </p>
+        </form>
+    </section>
+
+    <section class="panel right" ng-class="{'center': panel == 1, 'right': panel < 1}">
+        <div ng-click="panel = 0">
+            Back
+        </div>
+        <div>
+            {{weather.city.name}}/{{weather.city.country}}
+        </div>
+        <div class="row" ng-class="{'row_active': $index == 0}" ng-repeat="t in weather.list" ng-click="expand($event)">
+            <div class="date">{{ t.dt*1000 | date:'EEE' }}</div>
+            <div class="temperature">{{ Math.round(t.main.temp - 273.15) }} °C</div>
+            <div class="details">Some details when the div is selected</div>
+        </div>
+    </section>
+
+</section>

@@ -1,0 +1,99 @@
+/* WARNING : USE SASS FOR CLEANER CODE */
+
+/*Following code works on all the components*/
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    line-height: 60px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #11acab;
+}
+
+.view {
+    position: absolute;
+    top: 60px; right: 0; bottom: 60px; left: 0;
+}
+
+nav {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #4f597b;
+}
+
+nav a {
+    display: block;
+    width: 50%;
+    float: left;
+    /* WARNING : USE COMPASS TO REMOVE ALL THE PREFIXES */
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+}
+
+nav a:first-child {
+    border-right: 1px solid #1f253d;
+}
+
+nav a.active {
+    border-top: 3px solid #11acab;
+}
+
+.panel {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /*Scroll on mobile iOS */
+    -webkit-overflow-scrolling: touch;
+    /* WARNING : USE COMPASS TO REMOVE ALL THE PREFIXES */
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+}
+
+.panel-padding {
+    padding: 0 25px;
+}
+
+.left {
+    /* WARNING : USE COMPASS TO REMOVE ALL THE PREFIXES */
+    /* Note : translate3d gives better performances than translateX */
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+}
+
+.center {
+    /* WARNING : USE COMPASS TO REMOVE ALL THE PREFIXES */
+    /* Note : translate3d gives better performances than translateX */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.right {
+    /* WARNING : USE COMPASS TO REMOVE ALL THE PREFIXES */
+    /* Note : translate3d gives better performances than translateX */
+    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+}
+
+/* HOME */
+.row.row_active { /* Select element with class row AND row_active */
+    color: red;
+}
+
+.row .details {
+    display: none;
+}
+
+.row.row_active .details {
+    display: block;
+}

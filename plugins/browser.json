@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "cc.peccaud.weather"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "cc.peccaud.weather"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "cc.peccaud.weather"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "cc.peccaud.weather"
+        }
+    }
+}
